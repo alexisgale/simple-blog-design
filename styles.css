@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #232730;
+  font-family: "Inter", serif;
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+
+/* Nav */
+.navigation-links {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.logo-nav h2,
+.logo-nav h2 a {
+  font-weight: 300;
+  font-size: 2rem;
+  color: white;
+}
+
+nav {
+  display: flex;
+  width: 80%;
+  padding: 5px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+nav > ul {
+  font-size: 1rem;
+  display: flex;
+  gap: 40px;
+}
+nav > ul li {
+  display: flex;
+  flex-wrap: wrap;
+}
+nav > ul a {
+  color: white;
+  flex-wrap: wrap;
+}
+@media (max-width: 480px) and (max-height: 800px) {
+  .logo-nav h2,
+  .logo-nav h2 a {
+    padding-bottom: 10px;
+  }
+  nav > ul {
+    padding: 10px;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid gray;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+@media (max-width: 768px) and (max-height: 1024px) {
+  .logo-nav h2,
+  .logo-nav h2 a {
+    padding-bottom: 10px;
+  }
+  nav > ul {
+    padding: 20px;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid gray;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+/* Title */
+.title {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.title img {
+  mix-blend-mode: multiply;
+}
+.title h1 {
+  color: #ea7873;
+  font-size: 3rem;
+  font-weight: 400;
+  font-style: italic;
+  padding-bottom: 5px;
+}
+.title h2 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+@media (max-width: 480px) and (max-height: 800px) {
+  .title h1 {
+    font-size: 1rem;
+  }
+  .title h2 {
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  .title img {
+    width: 100px;
+  }
+}
+@media (max-width: 768px) and (max-height: 1024px) {
+  .title h1 {
+    font-size: 2rem;
+  }
+  .title h2 {
+    color: white;
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  .title img {
+    width: 150px;
+  }
+}
+
+/* Main */
+.menu {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.menu ul {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.menu li a {
+  color: gray;
+}
+.cards {
+  display: flex;
+  gap: 10px; /* Reduced gap for smaller screens */
+  padding: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* Ensures cards wrap to the next line on smaller screens */
+}
+
+.card {
+  max-width: 300px;
+  width: 100%; /* Allows card to adapt to container width */
+  height: auto; /* Remove fixed height for better responsiveness */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.card-image {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 16px;
+  justify-content: center;
+}
+
+.card-content h2 {
+  margin: 0 0 8px;
+  font-size: 1.2em;
+  color: black;
+}
+
+.card-content p {
+  margin: 0 0 16px;
+  font-size: 0.9em;
+}
+
+.card-content span {
+  font-size: 0.9em;
+}
+
+/* Mobile-first approach for smaller devices */
+@media (max-width: 480px) {
+  .cards {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .card {
+    /* Cards take full width on small screens */
+    width: 500px;
+    margin-bottom: 20px;
+  }
+
+  .card-content h2 {
+    font-size: 1em;
+  }
+
+  .card-content p {
+    font-size: 0.8em;
+  }
+
+  .card-content span {
+    font-size: 0.8em;
+  }
+}
+
+/* Tablet layout adjustments */
+@media (max-width: 768px) {
+  .cards {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .card {
+    max-width: 50%; /*FOR 1 COLUMN :)*/
+  }
+}
+
+hr {
+  border: 0.5px solid rgb(45, 44, 44);
+}
+
+/*Pages */
+.pages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.pages ul {
+  justify-self: center;
+  display: flex;
+  gap: 10px;
+  color: gray;
+  font-style: italic;
+}
+.pages ul li {
+  font-size: 1.2rem;
+}
+
+/* Mobile-first approach for smaller devices */
+@media (max-width: 480px) {
+  .pages {
+    max-width: 100%; /* Cards take full width on small screens */
+  }
+}
+/* Tablet layout adjustments */
+@media (max-width: 768px) {
+  .pages {
+    max-width: 100%;
+    gap: 10px;
+  }
+}
+/* Footer */
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+}
+footer ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: #499ce6;
+  border: none;
+  color: white;
+  width: 180px;
+  height: 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* Mobile-first approach for smaller devices */
+@media (max-width: 480px) {
+  footer {
+    font-size: 3px;
+  }
+  button {
+    font-size: 3px;
+    width: 20px;
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+}
+/* Tablet layout adjustments */
+@media (max-width: 768px) {
+  footer {
+    font-size: 10px;
+  }
+  button {
+    font-size: 10px;
+    width: 150px;
+    margin-bottom: 10px;
+  }
+}
